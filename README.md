@@ -39,7 +39,7 @@ _This is an MVC application that was built using C#._
 <li>Open a shell program and navigate to your desktop.
 <li>Clone the repository for this project using the "git clone" command and including the copied URL.
 <li>While still in the shell program, navigate to the root directory of the newly created file named "Factory.Solution".
-<li>From the root directory, navigate to the "BestRestuarants" directory.
+<li>From the root directory, navigate to the "Factory" directory.
 <li>Move onto "SQL Workbench" instructions below to re-create database necessary to run this project.
 <br>
 </details>
