@@ -1,0 +1,35 @@
+@{
+  Layout ="_Layout";
+}
+
+@model Factory.Models.Machine;
+
+<h4>Edit @Html.DisplayFor(model => model.MachineName)'s Design:</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+
+  @Html.LabelFor(model => model.MachineName)
+  @Html.EditorFor(model => model.MachineName)
+
+  <input type="submit" value="Save" />
+}
+
+<h4>Manage @Html.DisplayFor(model => model.MachineName) licenses:</h4>
+
+<ul>
+  @foreach (var join in Model.JoinEntities)
+  {
+    <li>
+      @join.Engineer.EngineerName
+      @using (Html.BeginForm("DeleteEngineer", "Machine"))
+      {
+        @Html.Hidden("joinId", @join.EngineerMachineId)
+        <input type="submit" class="btn btn-danger btn-sm" value="Delete"/>
+      }
+    </li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Go Back", "Index")</p>

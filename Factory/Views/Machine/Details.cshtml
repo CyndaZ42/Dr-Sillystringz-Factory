@@ -15,4 +15,6 @@
 </ul>
 
 <p>@Html.ActionLink("Assign a new engineer", "AddEngineer", new { id = Model.MachineId })</p>
+<p>@Html.ActionLink("Revise Machine", "Edit", new { id = Model.MachineId })</p>
+<p>@Html.ActionLink("Destroy Machine", "Delete", new { id = Model.MachineId })</p>
 <p>@Html.ActionLink("Go Back", "Index")</p>

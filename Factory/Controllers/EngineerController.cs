@@ -71,9 +71,9 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Edit (Engineer engineer)
     {
-        _db.Entry(engineer).State = EntityState.Modified;
-        _db.SaveChanges();
-        return RedirectToAction("Index");
+      _db.Entry(engineer).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     }
 
     public ActionResult Delete (int id)
