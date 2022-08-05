@@ -12,11 +12,11 @@
 <ul>
   @foreach (var join in Model.JoinEntities)
   {
-    <li>@join.Machine.MachineName</li>
+    <li>@Html.ActionLink($"{join.Machine.MachineName}", "Details", "Machine", new { id = join.Machine.MachineId })</li>
   }
 </ul>
 
-<p>@Html.ActionLink("Assign a new license", "AddMachine", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Edit Profile", "Edit", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Go Back", "Index")</p>
+<p>@Html.ActionLink("Assign a new license", "AddMachine", new { id = Model.EngineerId }, new { @class = "btn btn-primary btn-lg col-6" })</p>
+<p>@Html.ActionLink("Edit Profile", "Edit", new { id = Model.EngineerId }, new { @class = "btn btn-warning btn-lg col-6" })</p>
+<p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId }, new { @class = "btn btn-danger btn-lg col-6" })</p>
+<p>@Html.ActionLink("Go Back", "Index", "Engineer", null, new { @class = "btn btn-secondary btn-lg col-6" })</p>

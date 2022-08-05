@@ -15,5 +15,6 @@
   @Html.Label("Select Engineer")
   @Html.DropDownList("EngineerId")
 
-  <input type="submit" value="Save" />
+  <input type="submit" class="btn btn-success btn-sm" value="Save" />
 }
+<p>@Html.ActionLink("Go Back", "Index", "Machine", null, new { @class = "btn btn-secondary btn-lg col-6" })</p>

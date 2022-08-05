@@ -13,7 +13,7 @@
   @Html.LabelFor(model => model.EngineerName)
   @Html.EditorFor(model => model.EngineerName)
 
-  <input type="submit" value="Save" />
+  <input type="submit" value="Save" class="btn btn-success btn-sm" />
 }
 
 <h4>Manage @Html.DisplayFor(model => model.EngineerName)'s licenses:</h4>
@@ -32,5 +32,4 @@
   }
 </ul>
 
-<p>@Html.ActionLink("Go Back", "Index")</p>
-
+<p>@Html.ActionLink("Go Back", "Index", "Engineer", null, new { @class = "btn btn-secondary btn-lg col-6" })</p></div>

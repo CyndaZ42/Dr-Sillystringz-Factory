@@ -8,10 +8,10 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.MachineName)
+  <h4> @Html.Label("Machine Name")</h4>
   @Html.TextBoxFor(model => model.MachineName)
-
-  <input type="submit" value="Register a new Invention" />
+  <br>
+  <input type="submit" value="Register a new Invention" class="btn btn-success btn-sm"/>
 }
 
-<p>@Html.ActionLink("Go Back", "Index")</p>
+<p>@Html.ActionLink("Go Back", "Index", "Machine", null, new { @class = "btn btn-secondary btn-lg col-6" })</p>

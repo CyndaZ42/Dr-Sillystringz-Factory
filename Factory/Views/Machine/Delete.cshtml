@@ -9,6 +9,6 @@
 @Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model => model.MachineName)
 @using (Html.BeginForm())
 {
-  <input type="submit" class="btn btn-danger" value="Delete" />
+  <input type="submit" class="btn btn-danger btn-lg" value="Delete" />
 }
-@Html.ActionLink("Back to List", "Index")
+<p>@Html.ActionLink("Go Back", "Index", "Machine", null, new { @class = "btn btn-secondary btn-lg col-6" })</p>

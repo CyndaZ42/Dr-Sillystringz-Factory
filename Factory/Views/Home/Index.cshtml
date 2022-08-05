@@ -4,5 +4,5 @@
 
 <h1>Welcome to Dr. Sillystringz's Factory</h1>
 
-<p>@Html.ActionLink("Machines", "Index", "Machine")</p>
-<p>@Html.ActionLink("Engineers", "Index", "Engineer")</p>
+<a href="@Url.Action("Index", "Machine")" class="btn btn-secondary btn-lg">Machines</a>
+<a href="@Url.Action("Index", "Engineer")" class="btn btn-secondary btn-lg">Engineers</a>

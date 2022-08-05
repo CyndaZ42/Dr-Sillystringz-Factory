@@ -3,18 +3,18 @@
 }
 
 @model Factory.Models.Machine;
+<h2>The mechanical mystery: <strong>@Html.DisplayFor(model => model.MachineName)</strong></h2>
 
-<h3>The mechanical mystery: <strong>@Html.DisplayFor(model => model.MachineName)</strong></h3>
-
-<h4>Licensed engineers:</h4>
+<h3>Licensed engineers:</h3>
 <ul>
   @foreach (var join in Model.JoinEntities)
   {
-    <li>@join.Engineer.EngineerName</li>
+    <li>@Html.ActionLink($"{join.Engineer.EngineerName}", "Details", "Engineer", new { id = join.Engineer.EngineerId })</li>
   }
 </ul>
-
-<p>@Html.ActionLink("Assign a new engineer", "AddEngineer", new { id = Model.MachineId })</p>
-<p>@Html.ActionLink("Revise Machine", "Edit", new { id = Model.MachineId })</p>
-<p>@Html.ActionLink("Destroy Machine", "Delete", new { id = Model.MachineId })</p>
-<p>@Html.ActionLink("Go Back", "Index")</p>
+<div class="row">
+  <p>@Html.ActionLink("Assign a new engineer", "AddEngineer", new { id = Model.MachineId }, new { @class = "btn btn-info btn-lg col-6" })</p>
+  <p>@Html.ActionLink("Revise Machine", "Edit", new { id = Model.MachineId }, new { @class = "btn btn-warning btn-lg col-6" })</p>
+  <p>@Html.ActionLink("Destroy Machine", "Delete", new { id = Model.MachineId }, new { @class = "btn btn-danger btn-lg col-6" })</p>
+  <p>@Html.ActionLink("Go Back", "Index", "Machine", null, new { @class = "btn btn-secondary btn-lg col-6" })</p>
+</div>
