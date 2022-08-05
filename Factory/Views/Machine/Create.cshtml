@@ -1,0 +1,17 @@
+@{
+  Layout ="_Layout";
+}
+
+@model Factory.Models.Machine;
+
+<h2>Register a new Invention</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.MachineName)
+  @Html.TextBoxFor(model => model.MachineName)
+
+  <input type="submit" value="Register a new Invention" />
+}
+
+<p>@Html.ActionLink("Go Back", "Index")</p>
