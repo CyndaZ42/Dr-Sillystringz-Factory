@@ -1,3 +1,15 @@
 @{
   Layout ="_Layout";
 }
+@using Factory.Models;
+
+<h1>Meet the Engineers</h1>
+
+<ul>
+  @foreach (Engineer engineer in Model)
+  {
+    <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

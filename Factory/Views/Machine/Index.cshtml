@@ -1,3 +1,15 @@
 @{
   Layout ="_Layout";
 }
+@using Factory.Models;
+
+<h1>The Marvelous Machines of Dr. Sillystringz</h1>
+
+<ul>
+  @foreach (Machine machine in Model)
+  {
+    <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
