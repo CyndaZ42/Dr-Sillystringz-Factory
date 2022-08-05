@@ -1,0 +1,9 @@
+@{
+  Layout ="_Layout";
+}
+
+@model Factory.Models.Machine;
+
+<h3>The mechanical mystery: <strong>@Html.DisplayFor(model => model.MachineName)</strong></h3>
+
+<p>@Html.ActionLink("Go Back", "Index")</p>

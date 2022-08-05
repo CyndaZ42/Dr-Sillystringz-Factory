@@ -1,0 +1,9 @@
+@{
+  Layout ="_Layout";
+}
+
+@model Factory.Models.Engineer;
+
+<h3>Meet your engineer: <strong>@Html.DisplayFor(model => model.EngineerName)</strong></h3>
+
+<p>@Html.ActionLink("Go Back", "Index")</p>
