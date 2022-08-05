@@ -6,5 +6,13 @@
 
 <h3>The mechanical mystery: <strong>@Html.DisplayFor(model => model.MachineName)</strong></h3>
 
+<h4>Licensed engineers:</h4>
+<ul>
+  @foreach (var join in Model.JoinEntities)
+  {
+    <li>@join.Engineer.EngineerName</li>
+  }
+</ul>
+
 <p>@Html.ActionLink("Assign a new engineer", "AddEngineer", new { id = Model.MachineId })</p>
 <p>@Html.ActionLink("Go Back", "Index")</p>

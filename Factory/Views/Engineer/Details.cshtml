@@ -6,5 +6,15 @@
 
 <h3>Meet your engineer: <strong>@Html.DisplayFor(model => model.EngineerName)</strong></h3>
 
+
+<h4>@Html.DisplayFor(model => model.EngineerName)'s licenses:</h4>
+
+<ul>
+  @foreach (var join in Model.JoinEntities)
+  {
+    <li>@join.Machine.MachineName</li>
+  }
+</ul>
+
 <p>@Html.ActionLink("Assign a new license", "AddMachine", new { id = Model.EngineerId })</p>
 <p>@Html.ActionLink("Go Back", "Index")</p>
